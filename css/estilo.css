@@ -1,0 +1,376 @@
+.detalle, .card .card-body, .carousel .slide .cardHorizontal .card-body {
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  color: #42403b; }
+
+.boton, .btn-primary, .btn-outline-success {
+  padding: 5px;
+  margin-bottom: 10px;
+  font-family: "Urbanist", sans-serif;
+  font-size: 12px !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: #fff !important;
+  background-color: #42403b !important;
+  border-radius: 45px !important;
+  border-color: #42403b !important;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none; }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px; }
+  * body {
+    background-color: #f8f8e9 !important; }
+    * body h2 {
+      font-size: 2rem;
+      font-family: "Urbanist", sans-serif;
+      margin: 40px 0px 0px 30px !important;
+      color: #7B3F23; }
+
+/*HEADER*/
+.header {
+  background-color: #B66A46;
+  height: 200px;
+  padding: 10px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+  .header .titulo {
+    color: #F6E8DC;
+    font-size: 4rem;
+    font-family: "Urbanist", sans-serif; }
+  .header .logo {
+    height: 140px;
+    width: 140px; }
+
+/*FOOTER*/
+.footer {
+  background-color: #777165;
+  height: 75px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 30px 0px 30px; }
+  .footer .parrafoFooter {
+    margin: 0 6px 0 0; }
+  .footer .instagram {
+    display: flex;
+    justify-content: end;
+    align-items: center; }
+    .footer .instagram .bi {
+      height: 40px;
+      width: 40px;
+      margin-left: 10px;
+      border-radius: 0%;
+      color: #fff !important; }
+      .footer .instagram .bi:hover {
+        transition-duration: 500ms;
+        transform: scale(1.1, 1.1); }
+
+/*NAV*/
+.navbar-light {
+  margin: 0px;
+  z-index: 10 !important; }
+
+.bg-light {
+  background-color: #777165 !important;
+  height: 50px;
+  position: sticky !important;
+  top: 0px;
+  margin-top: 0px; }
+
+.navbar > .container-fluid {
+  background-color: #777165; }
+  .navbar > .container-fluid .navbar-brand {
+    margin-bottom: 5px; }
+  .navbar > .container-fluid .navbar-toggler {
+    margin: 10px 0px 10px 0px; }
+  .navbar > .container-fluid .d-flex {
+    margin: 10px 10px 10px 0px; }
+    .navbar > .container-fluid .d-flex .form-control {
+      height: 40px;
+      font-family: "Nunito", sans-serif !important;
+      border-radius: 45px !important; }
+    .navbar > .container-fluid .d-flex .me-2 {
+      box-shadow: none !important; }
+
+.menu {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1; }
+
+.nav-link, .active, .navbar-brand {
+  color: #F6E8DC !important;
+  text-decoration: none;
+  font-weight: 100; }
+
+.nav-item {
+  font-family: "Urbanist", sans-serif;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-image: linear-gradient(#F6E8DC, #F6E8DC);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: 20px .3s;
+  margin: 0 8px; }
+  .nav-item:hover {
+    transition-duration: 500ms;
+    background-size: 100% 2px; }
+  .nav-item:focus {
+    background-size: 100% 2px; }
+
+/*CARDS*/
+.card {
+  height: 500px !important;
+  width: 300px;
+  margin: 20px 5px 20px 5px;
+  background-color: white;
+  border: 1px solid #f1efef;
+  border-radius: 10px; }
+  .card .card-img-top {
+    height: 300px;
+    width: 200px !important;
+    border-radius: 10px;
+    margin: 20px  auto; }
+  .card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+    .card .card-body .badge {
+      z-index: 8 !important;
+      background-color: green !important; }
+
+/*CARRUSEL*/
+.carousel {
+  background-color: #c4c1bb;
+  height: 500px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .carousel .slide {
+    display: flex;
+    justify-content: center; }
+    .carousel .slide .cardHorizontal {
+      height: 400px !important;
+      width: 700px;
+      background-color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      border-radius: 5px; }
+      .carousel .slide .cardHorizontal .fotoCarrusel {
+        height: 300px;
+        width: 200px !important;
+        border-radius: 10px; }
+      .carousel .slide .cardHorizontal .card-body {
+        flex: none !important; }
+
+@media (max-width: 768px) {
+  header {
+    justify-content: center !important; }
+  .titulo {
+    display: none !important; }
+  .carousel {
+    height: 600px !important; }
+    .carousel .slide .cardHorizontal {
+      height: 500px !important;
+      width: 300px;
+      margin: 20px 5px 20px 5px;
+      flex-direction: column; }
+      .carousel .slide .cardHorizontal .fotoCarrusel {
+        margin: 20px  auto; }
+      .carousel .slide .cardHorizontal .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center; }
+  .containerCarta, .containerVideo {
+    margin-top: 20px !important; }
+    .containerCarta .cartaUno, .containerVideo .cartaUno {
+      width: 100% !important;
+      margin-top: 10px !important; }
+    .containerCarta .cartaDos, .containerVideo .cartaDos {
+      width: 100% !important;
+      margin-bottom: 10px; }
+  .footer .instagram .parrafoFooter {
+    display: none !important; } }
+
+/*BUTTONS*/
+.btn-primary:hover {
+  background-color: #fff;
+  box-shadow: 0px 15px 20px #42403b;
+  color: #fff;
+  transform: translateY(-3px);
+  cursor: pointer; }
+
+.btn-outline-success {
+  padding: 10px !important;
+  color: #F6E8DC !important;
+  border-color: #F6E8DC !important;
+  box-shadow: none !important; }
+  .btn-outline-success:hover {
+    background-color: #F6E8DC !important;
+    color: #42403b !important;
+    border-color: #F6E8DC !important; }
+
+.contenedorCarrusel {
+  background-color: #F6E8DC; }
+
+/*------------------- HOME -------------------*/
+.bloqueProductos {
+  margin: 40px 0px 60px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.promo {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #f1efef;
+  border-radius: 10px;
+  margin: 40px auto 60px; }
+  .promo .imagenBombilla {
+    height: 200px;
+    width: 250px; }
+  .promo .bombilla {
+    margin: 0px 0px 50px 50px; }
+
+/*-------------- QUIENES SOMOS --------------*/
+.containerCarta, .containerVideo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 50px 60px 50px;
+  flex-wrap: wrap; }
+  .containerCarta .solProductos, .containerVideo .solProductos {
+    height: 450px;
+    width: 500px; }
+  .containerCarta .cartaUno, .containerVideo .cartaUno {
+    margin-left: 10px;
+    line-height: 40px;
+    width: 44%; }
+  .containerCarta .cartaDos, .containerVideo .cartaDos {
+    margin-left: 30px;
+    line-height: 40px;
+    width: 50%; }
+  .containerCarta .video, .containerVideo .video {
+    border-radius: 10px;
+    height: 400px;
+    width: 400px; }
+
+.containerFrase {
+  display: flex;
+  justify-content: center; }
+  .containerFrase .frase {
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 450;
+    font-family: "Urbanist", sans-serif;
+    text-align: center;
+    padding: 20px 0;
+    width: 72%;
+    color: #7B3F23;
+    border-top: #7B3F23 1px dashed;
+    border-bottom: #7B3F23 1px dashed; }
+
+/*---------------- PRODUCTOS ----------------*/
+.productos .nombreSeccion {
+  font-family: "Urbanist", sans-serif;
+  color: #7B3F23;
+  margin: 60px 0px 30px 40px !important; }
+
+.productos .mates {
+  margin: 40px 0px 60px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.productos .aclaracion {
+  font-style: italic;
+  text-align: center;
+  margin: 40px 0px 40px 0px; }
+
+/*------------------ DUDAS ------------------*/
+.preguntasFrecuentes .accordion {
+  margin: 8%;
+  font-family: "Nunito", sans-serif !important; }
+  .preguntasFrecuentes .accordion h2 {
+    margin: 0 !important; }
+  .preguntasFrecuentes .accordion .accordion-button {
+    background-color: #C98A6C;
+    color: black; }
+    .preguntasFrecuentes .accordion .accordion-button:focus {
+      box-shadow: none; }
+    .preguntasFrecuentes .accordion .accordion-button:not(.collapsed)::after {
+      background-image: none; }
+
+/*---------------- CONTACTO ----------------*/
+.contacto .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 60px; }
+  .contacto .form input {
+    border-radius: 5px;
+    box-shadow: none; }
+  .contacto .form .form-text {
+    font-family: "Nunito", sans-serif !important; }
+  .contacto .form .dropdownAsunto {
+    z-index: -1; }
+    .contacto .form .dropdownAsunto .dropdown-toggle {
+      width: 100%;
+      margin: 0 0 10px 0 !important; }
+    .contacto .form .dropdownAsunto .dropdown-menu {
+      z-index: 1;
+      background-color: #fff;
+      font-family: "Nunito", sans-serif !important; }
+  .contacto .form .comentario {
+    margin-bottom: 10px;
+    height: 100px !important;
+    width: 100% !important;
+    border-color: #ced4da !important; }
+  .contacto .form .form-check-label {
+    font-family: "Nunito", sans-serif !important; }
+  .contacto .form .botones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px; }
+    .contacto .form .botones .mb-3, .contacto .form .botones .form-check {
+      padding-left: 0 !important;
+      margin-bottom: 0 !important; }
+      .contacto .form .botones .mb-3 .enviar, .contacto .form .botones .mb-3 .borrar, .contacto .form .botones .form-check .enviar, .contacto .form .botones .form-check .borrar {
+        width: 100px;
+        height: 30px; }
+    .contacto .form .botones .agradecimiento {
+      text-align: center; }
+      .contacto .form .botones .agradecimiento .texto {
+        width: 220px; }
