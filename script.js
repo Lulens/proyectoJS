@@ -84,6 +84,7 @@ $(() => {
                 `
             ) 
         } else {
+
             productoEncontrado.forEach(producto => {
                 $('#resultados').empty().prepend(producto.devolverDatos())
             })
@@ -95,31 +96,3 @@ $(() => {
 
     })
 })
-
-
-// $(() => {
-
-//     $('#formBuscar').submit((e) => {
-//         e.preventDefault()
-
-//         let formData = new FormData(e.target)
-//         let buscar = formData.get("busqueda") 
-//         let productoEncontrado = productos.find(producto => producto.nombre == buscar)
-
-//         $('#botonBuscar').click(() => {
-            
-//             if(!productoEncontrado){
-//                 $('#resultados').empty().prepend(
-//                     `<p>El producto que ingresaste es inexistente :( ¡Intentá de nuevo!</p>
-//                     `
-//                 ) 
-//             } else {
-//                 $('#resultados').empty().prepend(productoEncontrado.devolverDatos())
-//             }
-
-//         })
-
-//         $('#formBuscar').trigger('reset')
-
-//     })
-// })
