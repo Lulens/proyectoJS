@@ -9,7 +9,6 @@
 
     body{
         background-color: rgb(248, 248, 233) !important;
-        
 
         h2{
             font-size: $tamanio-subtitulo;
@@ -317,7 +316,16 @@
     background-color: $blanco-crema;//#ced4da;
 }
 /*------------------- HOME -------------------*/
-.bloqueProductos, .resultados{
+#resultados{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.bloqueProductos{
     margin: 40px 0px 60px 0px;
     display: flex;
     justify-content: space-around;

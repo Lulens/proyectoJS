@@ -42,7 +42,6 @@ class Producto {
 
     devolverDatos(){
         return`
-        <h2>Resultado de tu búsqueda</h2>
             <div class="card" >
             <img src="${this.imagen}" class="card-img-top" alt="${this.nombreCompleto}">
         <div class="card-body">
@@ -62,8 +61,7 @@ const mateMaderaDiseño = new Producto ("mate", "Mate de madera con diseño a el
 const tablaAlgarrobo = new Producto ("tabla", "Tabla 15x40 de algarrobo", "$1000", "images/tablaAlgarrobo.JPG")
 const tablaAlgarroboRetrato = new Producto ("tabla", "Tabla de algarrobo con un retrato", "$1000", "images/tablaRetrato.JPG")
 const tablaPremium = new Producto ("tabla", "Tabla 15x40 Premium de madera calden", "$1500", "images/tablaPremiumMadera.JPG")
-const yerberoAzucarero = new Producto ("yerbero", "Yerbero y azucarero de color", "$650", "images/yerberoAzucarero.JPG")
-
+const yerberoAzucarero = new Producto ("azucarero", "Yerbero y azucarero de color", "$650", "images/yerberoAzucarero.JPG")
 
 const productos = [mateVidrio, mateCalabazaRetrato, mateCalabazaDiseño, mateMaderaRetrato, mateMaderaDiseño, tablaAlgarrobo, tablaAlgarroboRetrato, tablaPremium, yerberoAzucarero]
 
@@ -76,20 +74,24 @@ $(() => {
         let formData = new FormData(e.target)
         let buscar = formData.get("busqueda") 
         let productoEncontrado = productos.filter(producto => producto.nombre == buscar)
-        console.log(productoEncontrado)
 
         if(!productoEncontrado){
-            $('#resultados').empty().prepend(
-                `<p>El producto que ingresaste es inexistente :( ¡Intentá de nuevo!</p>
-                `
-            ) 
+
+            $('#tituloResultados').append(`Resultado de tu búsqueda`)
+
+            $('#resultados').append(`<p>El producto que ingresaste es inexistente :( ¡Intentá de nuevo!</p>`)
+                     
         } else {
 
+            $('#tituloResultados').empty().append(`Resultado de tu búsqueda`)
+
+            $('#resultados').empty()
+
             productoEncontrado.forEach(producto => {
-                $('#resultados').empty().prepend(producto.devolverDatos())
+                $('#resultados').append(producto.devolverDatos())
             })
 
-            // $('#resultados').empty().prepend(productoEncontrado.devolverDatos())
+
         }
 
         $('#formBuscar').trigger('reset')
