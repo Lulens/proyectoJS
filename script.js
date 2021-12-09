@@ -75,17 +75,14 @@ $(() => {
         let buscar = formData.get("busqueda") 
         let productoEncontrado = productos.filter(producto => producto.nombre == buscar)
 
-        if(!productoEncontrado){
+        $('#tituloResultados').empty().append(`Resultado de tu búsqueda`)
+        $('#resultados').empty()
 
-            $('#tituloResultados').append(`Resultado de tu búsqueda`)
+        if(productoEncontrado.length == 0){
 
             $('#resultados').append(`<p>El producto que ingresaste es inexistente :( ¡Intentá de nuevo!</p>`)
                      
         } else {
-
-            $('#tituloResultados').empty().append(`Resultado de tu búsqueda`)
-
-            $('#resultados').empty()
 
             productoEncontrado.forEach(producto => {
                 $('#resultados').append(producto.devolverDatos())

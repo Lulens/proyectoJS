@@ -31,7 +31,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="../indexviejo.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="quienessomos.html">¿Quiénes somos?</a>
@@ -43,16 +43,23 @@
                 <a class="nav-link" href="faq.html">¿Dudas?</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contactanos.html">Contactanos</a>
+                <a class="nav-link" href="contactanosviejo.html">Contactanos</a>
               </li>
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            <form class="d-flex" id="formBuscar">
+              <input class="form-control me-2" type="text" aria-label="Search" name="busqueda" id="busqueda" placeholder="mate/tabla/azucarero">
+              <button class="btn btn-outline-success" type="text" id="botonBuscar">Buscar</button>
             </form>
           </div>
         </div>
     </nav>
+
+    <div>
+      <h2 id="tituloResultados"></h2>
+      <div id="resultados"> 
+        
+      </div>
+    </div>
 
     <main class="preguntasFrecuentes">
 
@@ -143,6 +150,11 @@
         </svg></a>
       </div>   
     </footer>
+
+
+    <script src="https://michalsnik.github.io/aos/"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../script.js"></script>
 
 </body>
 </html>

@@ -11,6 +11,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/logo.jpeg"></link>
     <title>Contactanos</title>
 </head>
 <body>
@@ -29,7 +31,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="../indexviejo.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="quienessomos.html">¿Quiénes somos?</a>
@@ -44,18 +46,21 @@
                 <a class="nav-link" href="contactanosviejo.html">Contactanos</a>
               </li>
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            <form class="d-flex" id="formBuscar">
+              <input class="form-control me-2" type="text" aria-label="Search" name="busqueda" id="busqueda" placeholder="mate/tabla/azucarero">
+              <button class="btn btn-outline-success" type="text" id="botonBuscar">Buscar</button>
             </form>
           </div>
         </div>
   </nav>
 
-  <div id="resultados"></div>
+  <div>
+    <h2 id="tituloResultados"></h2>
+    <div id="resultados"> 
+      
+    </div>
+  </div>
 
-
-  <main class="contacto">
     <h2>Contactate con nosotras</h2>
 
     <div class="form container" id="formContacto">
@@ -73,11 +78,6 @@
                 <label for="mensaje"><p>Mensaje</p></label><br>
                 <textarea class="comentario" cols="30" rows="10" name="mensaje" id="mensaje"></textarea>
             </div>
-            <!--<div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Soy mayorista</label>
-            </div>
-          -->
             <div class="botones">
               <div class="mb-3 form-check">
                 <p><button class="btn btn-primary enviar" type="submit" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
@@ -107,6 +107,6 @@
 
   <script src="https://michalsnik.github.io/aos/"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="../script.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>
