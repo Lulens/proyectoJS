@@ -241,6 +241,9 @@
   align-items: center;
   flex-wrap: wrap; }
 
+#cantResultados {
+  margin: 10px 0px 0px 30px; }
+
 .bloqueProductos {
   margin: 40px 0px 60px 0px;
   display: flex;

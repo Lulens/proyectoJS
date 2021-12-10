@@ -32,48 +32,20 @@ $('#formContacto').submit((e) => {
 
 
 //---BOTON BUSCAR----
-class Producto {
-    constructor(nombre, nombreCompleto, precio, imagen) {
-        this.nombre = nombre
-        this.nombreCompleto = nombreCompleto
-        this.precio = precio
-        this.imagen = imagen
-    }
-
-    devolverDatos(){
-        return`
-            <div class="card" >
-            <img src="${this.imagen}" class="card-img-top" alt="${this.nombreCompleto}">
-        <div class="card-body">
-                <p class="detalle card-title">${this.nombreCompleto}<br>${this.precio}</p>
-                <a href="#" class="btn btn-primary">Comprar</a>
-            </div>
-        </div>
-        `
-    }
-}
-
-const mateVidrio = new Producto ("mate", "Mate de cuero y vidrio con un retrato", "$1650", "images/mateVidrio.JPG")
-const mateCalabazaRetrato = new Producto ("mate", "Mate de cuero y vidrio con un retrato", "$2650", "images/mateCalabazaRetrato.JPG")
-const mateCalabazaDiseño = new Producto ("mate", "Mate de cuero y calabaza con diseño a elección", "$1300", "images/mateCalabazaPersonalizado.JPG")
-const mateMaderaRetrato = new Producto ("mate", "Mate de madera con un retrato", "$1350", "images/mateMadera.JPG")
-const mateMaderaDiseño = new Producto ("mate", "Mate de madera con diseño a elección", "$1000", "images/mateMaderaRetrato.jpeg")
-const tablaAlgarrobo = new Producto ("tabla", "Tabla 15x40 de algarrobo", "$1000", "images/tablaAlgarrobo.JPG")
-const tablaAlgarroboRetrato = new Producto ("tabla", "Tabla de algarrobo con un retrato", "$1000", "images/tablaRetrato.JPG")
-const tablaPremium = new Producto ("tabla", "Tabla 15x40 Premium de madera calden", "$1500", "images/tablaPremiumMadera.JPG")
-const yerberoAzucarero = new Producto ("azucarero", "Yerbero y azucarero de color", "$650", "images/yerberoAzucarero.JPG")
-
-const productos = [mateVidrio, mateCalabazaRetrato, mateCalabazaDiseño, mateMaderaRetrato, mateMaderaDiseño, tablaAlgarrobo, tablaAlgarroboRetrato, tablaPremium, yerberoAzucarero]
-
-
 $(() => {
 
     $('#formBuscar').submit((e) => {
         e.preventDefault()
 
+        fetch('./productos.json')
+        .then(response => response.json())
+        .then(data => {
+    
+        let datosArray = Object.entries(data)
+
         let formData = new FormData(e.target)
         let buscar = formData.get("busqueda") 
-        let productoEncontrado = productos.filter(producto => producto.nombre == buscar)
+        let productoEncontrado = datosArray.filter(producto => producto.nombre == buscar)
 
         $('#tituloResultados').empty().append(`Resultado de tu búsqueda`)
         $('#resultados').empty()
@@ -85,13 +57,22 @@ $(() => {
         } else {
 
             productoEncontrado.forEach(producto => {
-                $('#resultados').append(producto.devolverDatos())
+                $('#resultados').append(`
+                    <div class="card" >
+                        <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombreCompleto}">
+                        <div class="card-body">
+                            <p class="detalle card-title">${producto.nombreCompleto}<br>${producto.precio}</p>
+                            <a href="#" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                `)
             })
 
-
         }
+        })
 
         $('#formBuscar').trigger('reset')
 
     })
 })
+

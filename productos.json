@@ -1,0 +1,57 @@
+[
+    {
+        "nombre": "mate",
+        "nombreCompleto": "Mate de cuero y vidrio con un retrato",
+        "precio": "$1650",
+        "imagen": "images/mateVidrio.JPG"
+    },
+    {
+        "nombre": "mate",
+        "nombreCompleto": "Mate de cuero y calabaza con un retrato",
+        "precio": "$2650",
+        "imagen": "images/mateCalabazaRetrato.JPG"
+    },
+    {
+        "nombre": "mate",
+        "nombreCompleto": "Mate de cuero y calabaza con diseño a elección",
+        "precio": "$1300",
+        "imagen": "images/mateCalabazaPersonalizado.JPG"
+    },
+    {
+        "nombre": "mate",
+        "nombreCompleto": "Mate de madera con un retrato",
+        "precio": "$1350",
+        "imagen": "images/mateMadera.JPG"
+    },
+    {
+        "nombre": "mate",
+        "nombreCompleto": "Mate de madera con diseño a elección",
+        "precio": "$1000",
+        "imagen": "images/mateMaderaRetrato.jpeg"
+    },
+    {
+        "nombre": "tabla",
+        "nombreCompleto": "Tabla 15x40 de algarrobo",
+        "precio": "$1000",
+        "imagen": "images/tablaAlgarrobo.JPG"
+    },
+    {
+        "nombre": "tabla",
+        "nombreCompleto": "Tabla de algarrobo con un retrato",
+        "precio": "$1000",
+        "imagen": "images/tablaRetrato.JPG"
+    },
+    {
+        "nombre": "tabla",
+        "nombreCompleto": "Tabla 15x40 Premium de madera calden",
+        "precio": "$1500",
+        "imagen": "images/tablaPremiumMadera.JPG"
+    },
+    {
+        "nombre": "azucarero",
+        "nombreCompleto": "Yerbero y azucarero de color",
+        "precio": "$650",
+        "imagen": "images/yerberoAzucarero.JPG"
+    }
+    
+]
