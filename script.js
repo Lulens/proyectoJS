@@ -1,14 +1,12 @@
 //----FORMULARIO----
 class Contacto {
-    constructor(id, nombre, correo, mensaje) {
-        this.id = id
+    constructor(nombre, correo, mensaje) {
         this.nombre = nombre
         this.correo = correo
         this.mensaje = mensaje
     }
 }
 
-let id = 1
 let contactos = []
 
 $('#formContacto').submit((e) => {
@@ -16,35 +14,35 @@ $('#formContacto').submit((e) => {
 
     let formDatos = new FormData(e.target)
 
-    let contacto = new Contacto (id, formDatos.get("nombre"), formDatos.get("correo"), formDatos.get("mensaje"))
+    let contacto = new Contacto (formDatos.get("nombre"), formDatos.get("correo"), formDatos.get("mensaje"))
 
     $('#respuestaMensaje').empty().append(
                 `<p class="detalle">¡Hola ${formDatos.get("nombre")}! Su mensaje ha sido enviado correctamente desde el mail ${formDatos.get("correo")}.<br>
                  Su mensaje es: ${formDatos.get("mensaje")}</p>
             `
             )
+            
 
     $('#formContacto').trigger('reset')
 
     console.log(contacto)
 })
 
-
-
 //---BOTON BUSCAR----
 $(() => {
 
     $('#formBuscar').submit((e) => {
-        e.preventDefault()
-
-        fetch('./productos.json')
-        .then(response => response.json())
-        .then(data => {
-    
-        let datosArray = Object.entries(data)
 
         let formData = new FormData(e.target)
         let buscar = formData.get("busqueda") 
+
+        e.preventDefault()
+
+        fetch('./productos.json') //hago una busqueda local a productos.json
+        .then(response => response.json())
+        .then(data => {
+    
+        let datosArray = data
         let productoEncontrado = datosArray.filter(producto => producto.nombre == buscar)
 
         $('#tituloResultados').empty().append(`Resultado de tu búsqueda`)
@@ -52,7 +50,7 @@ $(() => {
 
         if(productoEncontrado.length == 0){
 
-            $('#resultados').append(`<p>El producto que ingresaste es inexistente :( ¡Intentá de nuevo!</p>`)
+            $('#resultados').append(`<p id="inexistente">El producto que ingresaste es inexistente :( ¡Intentá de nuevo!</p>`)
                      
         } else {
 
@@ -76,3 +74,4 @@ $(() => {
     })
 })
 
+$('main').fadeIn('slow')
