@@ -38,7 +38,7 @@ $(() => {
 
         e.preventDefault()
 
-        fetch('./productos.json') //hago una busqueda local a productos.json
+        fetch('productos.json') //hago una busqueda local a productos.json
         .then(response => response.json())
         .then(data => {
     
@@ -65,7 +65,6 @@ $(() => {
                     </div>
                 `)
             })
-
         }
         })
 
