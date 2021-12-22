@@ -40,6 +40,12 @@
         height: 140px;
         width: 140px;   
     }
+
+    #nombreUsuario{
+        align-self: flex-end;
+        // justify-self: flex-start;
+        color: $blanco-crema;
+    }
 }
 
 /*FOOTER*/

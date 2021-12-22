@@ -53,6 +53,9 @@
   .header .logo {
     height: 140px;
     width: 140px; }
+  .header #nombreUsuario {
+    align-self: flex-end;
+    color: #F6E8DC; }
 
 /*FOOTER*/
 .footer {

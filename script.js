@@ -26,6 +26,15 @@ $('#formContacto').submit((e) => {
     $('#formContacto').trigger('reset')
 
     console.log(contacto)
+
+    localStorage.setItem("cliente", formDatos.get("nombre"))
+    
+    $(() => {
+        $('#nombreUsuario').append(
+            `¡Hola ${localStorage.getItem("cliente")}!`
+        )
+    })
+
 })
 
 //---BOTON BUSCAR----
